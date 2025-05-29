@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <main>
+    <main class="d-flex flex-column align-items-center roboto">
+        <h1 class="text-center text-capitalize my-5">to do list:</h1>
         <form action="#" method="post" id="taskForm" autocomplete="off">
         <label for="addTask">Add Task:</label>
         <input type="text" name="addTask" id="addTask" required>
         <button type="submit">Add</button>
         </form>
+        <ul id="taskList"></ul>
     </main>
     <script src="js/app.js"></script>
 </body>
