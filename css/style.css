@@ -17,9 +17,10 @@ li {
   background: white;
   padding: 10px;
   margin-bottom: 8px;
-  display: flex;
+  width: 400px;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-evenly;
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
   
@@ -28,7 +29,6 @@ li {
 .completed {
   text-decoration: line-through;
   opacity: 0.6;
-  wod
 }
 
 button.remove {
@@ -46,4 +46,13 @@ button.remove {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+}
+button:hover{
+  scale: 1.1;
+}
+button:active{
+  scale: 1;
+}
+button{
+  transition: scale ease 0.15s;
 }
