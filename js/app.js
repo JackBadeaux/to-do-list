@@ -9,16 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (taskText !== "") {
       const li = document.createElement("li");
-
+      taskList.appendChild(li);
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
+      li.appendChild(checkbox);
 
       const span = document.createElement("span");
       span.textContent = taskText;
+      li.appendChild(span);
 
       const removeBtn = document.createElement("button");
       removeBtn.textContent = "Remove";
       removeBtn.classList.add("remove");
+      li.appendChild(removeBtn);
 
       checkbox.addEventListener("change", () => {
         span.classList.toggle("completed");
@@ -28,10 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
         li.remove();
       });
 
-      li.appendChild(checkbox);
-      li.appendChild(span);
-      li.appendChild(removeBtn);
-      taskList.appendChild(li);
 
       input.value = "";
     }
